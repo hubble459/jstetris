@@ -1,0 +1,79 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Tetris</title>
+    </head>
+    <body>
+        <div class="flex">
+            <div class="section">
+                <h1 class="filler">Tetris</h1>
+                <fieldset class="field">
+                    <legend>Statistics</legend>
+                    <canvas id="stats" width="150" height="400"></canvas>
+                </fieldset>
+            </div>
+            <div class="section">
+                <fieldset class="field">
+                    <legend>Lines</legend>
+                    <p id="lines">000</p>
+                </fieldset>
+                <canvas autofocus id="canvas" tabindex="0" class="playing-field" width="150" height="360"></canvas>
+            </div>
+            <div class="section">
+                <fieldset class="field">
+                    <legend>Score</legend>
+                    <p id="score">000000</p>
+                </fieldset>
+                <fieldset class="field">
+                    <legend>Next</legend>
+                    <canvas id="next" width="100" height="100"></canvas>
+                </fieldset>
+                <fieldset class="field">
+                    <legend>Level</legend>
+                    <p id="level">00</p>
+                </fieldset>
+            </div>
+        </div>
+    </body>
+    <script src="tetris.js"></script>
+    <script src="main.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Atlantis' url('Atlantis.ttf') format('truetype');
+            src: url('Atlantis.ttf')
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Atlantis', monospace;
+        }
+
+        .filler {
+            padding: 3rem;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .section {
+            height: fit-content;
+        }
+
+        .field {
+            padding: 1rem;
+            margin: 1rem;
+            height: fit-content;
+        }
+
+        #canvas {
+            outline: 0;
+            border: 1rem black solid;
+        }
+    </style>
+</html>

@@ -1,0 +1,1 @@
+tetris('canvas', 'lines', 'score', 'next', 'level', 'stats');
